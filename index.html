@@ -2,47 +2,50 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ほってぃのブログだよー</title>
-    <link rel="stylesheet" href="styles.css"> <!-- CSSファイルへのリンク -->
+    <title>ほってぃのSPAブログ</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>ほってぃのブログだよー</h1>
         <nav>
             <ul>
-                <li><a href="#home">ホーム</a></li>
-                <li><a href="#about">ほってぃ模試</a></li>
-                <li><a href="#blog">ブログ</a></li>
+                <li><a href="#home" class="nav-link">ホーム</a></li>
+                <li><a href="#about" class="nav-link">ほってぃ模試</a></li>
+                <li><a href="#blog" class="nav-link">ブログ</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home">
-        <h2>ホーム</h2>
-        <p>ここにブログのイントロダクションを書きます。</p>
-    </section>
+    <main>
+        <section id="home" class="content active">
+            <h2>ホーム</h2>
+            <p>ここにブログのイントロダクションを書きます。</p>
+        </section>
 
-    <section id="about">
-        <h2>私について</h2>
-        <p>ここに自己紹介を書きます。</p>
-    </section>
+        <section id="about" class="content">
+            <h2>私について</h2>
+            <p>ここに自己紹介を書きます。</p>
+        </section>
 
-    <section id="blog">
-        <h2>最新のブログ記事</h2>
-        <article>
-            <h3>記事タイトル 1</h3>
-            <p>記事の概要や内容をここに書きます。</p>
-        </article>
-        <article>
-            <h3>記事タイトル 2</h3>
-            <p>記事の概要や内容をここに書きます。</p>
-        </article>
-    </section>
+        <section id="blog" class="content">
+            <h2>最新のブログ記事</h2>
+            <article>
+                <h3>記事タイトル 1</h3>
+                <p>記事の概要や内容をここに書きます。</p>
+            </article>
+            <article>
+                <h3>記事タイトル 2</h3>
+                <p>記事の概要や内容をここに書きます。</p>
+            </article>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2024 私のブログ. All Rights Reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
