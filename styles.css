@@ -1,6 +1,7 @@
+/* 全体のトランジション */
 /* グローバルスタイル */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* デフォルトのフォント */
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -11,25 +12,25 @@ body {
 
 /* h1のフォントを変更 */
 h1 {
-    font-family: 'Georgia', serif;
-    font-size: 2.5rem;
+    font-family: 'Georgia', serif; /* 元のフォントに変更 */
+    font-size: 2.5rem; /* デスクトップ用のフォントサイズ */
 }
 
 /* h2のフォントを変更 */
 h2 {
-    font-family: 'Georgia', serif;
-    font-size: 2rem;
+    font-family: 'Georgia', serif; /* 元のフォントに変更 */
+    font-size: 2rem; /* デスクトップ用のフォントサイズ */
 }
 
 /* h3のフォントを変更 */
 h3 {
-    font-family: 'Georgia', serif;
-    font-size: 1.5rem;
+    font-family: 'Georgia', serif; /* 元のフォントに変更 */
+    font-size: 1.5rem; /* デスクトップ用のフォントサイズ */
 }
 
 /* ヘッダー */
 header {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7); /* 背景を半透明の黒にして文字を強調 */
     color: white;
     padding: 1rem;
     text-align: center;
@@ -49,20 +50,20 @@ nav a {
     text-decoration: none;
     color: white;
     padding: 0.5rem 1rem;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7); /* 半透明の黒背景 */
     border-radius: 5px;
     transition: background 0.3s ease;
 }
 
 nav a:hover {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* ホバー時に少し明るく */
 }
 
 /* メインセクション */
 main {
     padding: 1rem;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* 各セクションの背景を半透明に */
     border-radius: 15px;
     margin: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -76,10 +77,16 @@ main {
     display: none;
 }
 
+
 .content.active {
     opacity: 1;
     transform: translateY(0);
     display: block;
+}
+
+/* セクションがスライドして表示されるエフェクト */
+.content.slide-in {
+    animation: slideIn 0.8s ease-out forwards; /* スライドインのアニメーション */
 }
 
 /* スライドインのキーフレーム */
@@ -121,30 +128,47 @@ footer {
     footer {
         font-size: 0.8rem;
     }
+
+    /* h1のフォントサイズ調整 */
+    h1 {
+        font-size: 2rem; /* スマホ用に少し小さく */
+    }
+
+    /* h2のフォントサイズ調整 */
+    h2 {
+        font-size: 1.6rem; /* スマホ用に少し小さく */
+    }
+
+    /* h3のフォントサイズ調整 */
+    h3 {
+        font-size: 1.3rem; /* スマホ用に少し小さく */
+    }
 }
 
 /* Google Drive + PDFリンクのスタイル */
 a[href*="drive.google.com"] {
     display: flex;
     align-items: center;
-    color: #f8f9fa;
-    text-decoration: none;
-    font-weight: bold;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 0.4rem 1rem;
-    border-radius: 5px;
-    transition: background 0.3s ease, color 0.3s ease;
+    color: #f8f9fa; /* 白に近い文字色 */
+    text-decoration: none; /* 下線なし */
+    font-weight: bold; /* 強調 */
+    background: rgba(255, 255, 255, 0.1); /* 背景を少し明るく */
+    padding: 0.4rem 1rem; /* 内側の余白 */
+    border-radius: 5px; /* 角を丸く */
+    transition: background 0.3s ease, color 0.3s ease; /* なめらかなアニメーション */
 }
 
 a[href*="drive.google.com"]:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
+    background: rgba(255, 255, 255, 0.2); /* ホバー時に背景を少し明るく */
+    color: #ffffff; /* 完全な白に変更 */
 }
 
+/* アイコンとテキストを横並びに配置 */
 a[href*="drive.google.com"] span {
-    margin-left: 10px;
+    margin-left: 10px; /* アイコンとテキストの間隔 */
 }
 
+/* アイコンスタイル */
 .icon {
     width: 24px;
     height: 24px;
@@ -153,20 +177,26 @@ a[href*="drive.google.com"] span {
     vertical-align: middle;
 }
 
-/* アイコンスタイル */
+/* Google Driveアイコン */
 .icon.drive {
-    background-image: url('google-drive-icon.png');
+    background-image: url('google-drive-icon.png'); /* Google Driveアイコンの画像 */
 }
 
+/* PDFアイコン */
 .icon.pdf {
-    background-image: url('pdf-icon.png');
+    background-image: url('pdf-icon.png'); /* PDFアイコンの画像 */
+}
+
+/* アイコンとテキストが中央揃え */
+a[href*="drive.google.com"] {
+    align-items: center;
 }
 
 /* コンタクトセクションのスタイル */
 #contact {
     text-align: center;
     padding: 2rem;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6); /* 背景を少し暗くして、文字が際立つように */
     border-radius: 15px;
     margin: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -175,32 +205,34 @@ a[href*="drive.google.com"] span {
 /* コンタクト情報のアイコンとテキストのスタイル */
 .contact-info {
     display: flex;
-    flex-direction: column; /* 縦並びに変更 */
-    justify-content: center;
-    gap: 1.5rem;
-    text-align: center;
+    flex-direction: row; /* 横並びにする */
+    justify-content: space-around; /* アイテムの間に均等なスペースを配置 */
+    gap: 2rem; /* 各項目の間隔を調整 */
+    flex-wrap: wrap; /* 横幅に収まらない場合は折り返し */
+    text-align: center; /* テキストを中央揃え */
 }
 
 .contact-item {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1rem; /* アイコンとテキストの間隔 */
+    flex: 1 1 200px; /* 横幅を自動で調整 */
 }
 
 .contact-item i {
-    font-size: 2rem;
-    color: #4CAF50;
+    font-size: 2rem; /* アイコンのサイズ */
+    color: #4CAF50; /* アイコンの色 */
 }
 
 .contact-item h3 {
-    margin: 0;
-    font-size: 1.1rem;
-    font-weight: normal;
+    margin: 0; /* h3タグのデフォルトのマージンをリセット */
+    font-size: 1.1rem; /* 見出しのフォントサイズ */
+    font-weight: normal; /* 見出しの太さを調整 */
 }
 
 .contact-item p {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1rem; /* テキストのフォントサイズ */
     color: white;
 }
 
@@ -212,22 +244,4 @@ a[href*="drive.google.com"] span {
 
 .contact-item a:hover {
     text-decoration: underline;
-}
-
-/* 縦画面（ポートレート）モード対応 */
-@media (orientation: portrait) {
-    .contact-info {
-        flex-direction: column; /* 縦並びに変更 */
-    }
-
-    .content {
-        padding: 1rem;
-    }
-}
-
-/* 横画面（ランドスケープ）モード対応 */
-@media (orientation: landscape) {
-    .contact-info {
-        flex-direction: row; /* 横並び */
-    }
 }
