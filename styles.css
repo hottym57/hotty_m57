@@ -44,6 +44,7 @@ nav ul {
     padding: 0;
     margin: 0;
     gap: 1rem;
+    flex-wrap: nowrap; /* 折り返しを防止 */
 }
 
 nav a {
@@ -53,10 +54,25 @@ nav a {
     background: rgba(0, 0, 0, 0.7); /* 半透明の黒背景 */
     border-radius: 5px;
     transition: background 0.3s ease;
+    white-space: nowrap; /* テキストが折り返されないように */
 }
 
 nav a:hover {
     background: rgba(0, 0, 0, 0.5); /* ホバー時に少し明るく */
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap; /* モバイルで折り返しを許可 */
+        justify-content: space-between; /* アイテム間のスペースを調整 */
+    }
+
+    nav a {
+        font-size: 0.9rem; /* フォントサイズを小さく調整 */
+        padding: 0.3rem 0.8rem;
+        white-space: normal; /* モバイルでは折り返しを許可 */
+    }
 }
 
 /* メインセクション */
