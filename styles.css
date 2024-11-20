@@ -1,18 +1,42 @@
-/* styles.css */
+/* 全体のトランジション */
+/* グローバルスタイル */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* デフォルトのフォント */
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background: url('gradient.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
 }
 
+/* h1のフォントを変更 */
+h1 {
+    font-family: 'Georgia', serif; /* 'Georgia'に変更 */
+    font-size: 2.5rem; /* フォントサイズを大きく */
+}
+
+/* h2のフォントを変更 */
+h2 {
+    font-family: 'Georgia', serif; /* 'Georgia'に変更 */
+    font-size: 2rem; /* フォントサイズを少し小さく */
+}
+
+/* h2のフォントを変更 */
+h3 {
+    font-family: 'Georgia', serif; /* 'Georgia'に変更 */
+    font-size: 1.5rem; /* フォントサイズを少し小さく */
+}
+
+/* ヘッダー */
 header {
-    background: #007BFF;
+    background: rgba(0, 0, 0, 0.7); /* 背景を半透明の黒にして文字を強調 */
     color: white;
     padding: 1rem;
     text-align: center;
 }
 
+/* ナビゲーションメニュー */
 nav ul {
     display: flex;
     justify-content: center;
@@ -26,27 +50,26 @@ nav a {
     text-decoration: none;
     color: white;
     padding: 0.5rem 1rem;
-    background: #0056b3;
+    background: rgba(0, 0, 0, 0.7); /* 半透明の黒背景 */
     border-radius: 5px;
     transition: background 0.3s ease;
 }
 
 nav a:hover {
-    background: #003d80;
+    background: rgba(0, 0, 0, 0.5); /* ホバー時に少し明るく */
 }
 
+/* メインセクション */
 main {
     padding: 1rem;
     text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* 各セクションの背景を半透明に */
+    border-radius: 15px;
+    margin: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-footer {
-    background: #f1f1f1;
-    color: #333;
-    text-align: center;
-    padding: 1rem;
-}
-
+/* セクションごとのアニメーション */
 .content {
     opacity: 0;
     transform: translateY(20px);
@@ -54,8 +77,162 @@ footer {
     display: none;
 }
 
+
 .content.active {
     opacity: 1;
     transform: translateY(0);
     display: block;
 }
+
+/* セクションがスライドして表示されるエフェクト */
+.content.slide-in {
+    animation: slideIn 0.8s ease-out forwards; /* スライドインのアニメーション */
+}
+
+/* スライドインのキーフレーム */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* フッター */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    nav a {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    main {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+/* Google Drive + PDFリンクのスタイル */
+a[href*="drive.google.com"] {
+    display: flex;
+    align-items: center;
+    color: #f8f9fa; /* 白に近い文字色 */
+    text-decoration: none; /* 下線なし */
+    font-weight: bold; /* 強調 */
+    background: rgba(255, 255, 255, 0.1); /* 背景を少し明るく */
+    padding: 0.4rem 1rem; /* 内側の余白 */
+    border-radius: 5px; /* 角を丸く */
+    transition: background 0.3s ease, color 0.3s ease; /* なめらかなアニメーション */
+}
+
+a[href*="drive.google.com"]:hover {
+    background: rgba(255, 255, 255, 0.2); /* ホバー時に背景を少し明るく */
+    color: #ffffff; /* 完全な白に変更 */
+}
+
+/* アイコンとテキストを横並びに配置 */
+a[href*="drive.google.com"] span {
+    margin-left: 10px; /* アイコンとテキストの間隔 */
+}
+
+/* アイコンスタイル */
+.icon {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Google Driveアイコン */
+.icon.drive {
+    background-image: url('google-drive-icon.png'); /* Google Driveアイコンの画像 */
+}
+
+/* PDFアイコン */
+.icon.pdf {
+    background-image: url('pdf-icon.png'); /* PDFアイコンの画像 */
+}
+
+/* アイコンとテキストが中央揃え */
+a[href*="drive.google.com"] {
+    align-items: center;
+}
+
+/* コンタクトセクションのスタイル */
+#contact {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.6); /* 背景を少し暗くして、文字が際立つように */
+    border-radius: 15px;
+    margin: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* コンタクト情報のアイコンとテキストのスタイル */
+.contact-info {
+    display: flex;
+    flex-direction: row; /* 横並びにする */
+    justify-content: space-around; /* アイテムの間に均等なスペースを配置 */
+    gap: 2rem; /* 各項目の間隔を調整 */
+    flex-wrap: wrap; /* 横幅に収まらない場合は折り返し */
+    text-align: center; /* テキストを中央揃え */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* アイコンとテキストの間隔 */
+    flex: 1 1 200px; /* 横幅を自動で調整 */
+}
+
+.contact-item i {
+    font-size: 2rem; /* アイコンのサイズ */
+    color: #4CAF50; /* アイコンの色 */
+}
+
+.contact-item h3 {
+    margin: 0; /* h3タグのデフォルトのマージンをリセット */
+    font-size: 1.1rem; /* 見出しのフォントサイズ */
+    font-weight: normal; /* 見出しの太さを調整 */
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 1rem; /* テキストのフォントサイズ */
+    color: white;
+}
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
