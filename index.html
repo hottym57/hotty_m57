@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ほってぃのブログ</title>
+    <title>ほってぃのブログだよー</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -13,37 +15,76 @@
             <ul>
                 <li><a href="#home" class="nav-link">ホーム</a></li>
                 <li><a href="#about" class="nav-link">ほってぃ模試</a></li>
-                <li><a href="#blog" class="nav-link">ブログ</a></li>
+                <li><a href="#blog" class="nav-link">雑記</a></li>
+                <li><a href="#contact" class="nav-link">コンタクト</a></li>
+
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- ホームセクション -->
         <section id="home" class="content active">
-            <h2>ホーム</h2>
-            <p>ここにブログのイントロダクションを書きます。</p>
+            <h2>ホームだよ</h2>
+            <p>どうも、「ほってぃ」と申します。<br>
+                個人で勝手に数学の模試を作ったり、何か面白いことができればいいなあと思ってこのホームページを作成しました！<br>
+                不定期で更新しますが、更新したときにはTwitterの方で告知するので、よろしくお願いします！
+            </p>
         </section>
 
+        <!-- ほってぃ模試セクション -->
         <section id="about" class="content">
-            <h2>私について</h2>
-            <p>ここに自己紹介を書きます。</p>
+            <h2>ほってぃ模試とは</h2>
+            <p>
+                東工大（現：科学大）の一般選抜の数学の試験を模したオリジナル模試です。<br>
+                試験は180分で全部で5問あり、配点は1問60点の300点満点の試験です。<br>
+                レベル帯としては「東工大の本試験」と同じレベルを意識しています。<br>
+                一応東工大作問サークルの元代表なので、ある程度の質は担保できると思っています。（笑）
+            </p>
+            <a href="https://drive.google.com/file/d/16dbQzwTWdHaFeRCCzvXN0bqXbZI_Ba51/view?usp=drive_link" target="_blank">
+                <span class="icon drive"></span>
+                <span>第8回ほってぃ模試 数学（Google Drive PDF）</span>
+                <span class="icon pdf"></span>
+            </a>
+        </section>
+        
+
+        <!-- 雑記セクション -->
+        <section id="blog" class="content">
+            <h2>雑記コーナー</h2>
+            <p>
+                普段あった面白いことやいいなと思ったことをマイペースに載せていきます。
+            </p>
         </section>
 
-        <section id="blog" class="content">
-            <h2>最新のブログ記事</h2>
-            <article>
-                <h3>記事タイトル 1</h3>
-                <p>記事の概要や内容をここに書きます。</p>
-            </article>
-            <article>
-                <h3>記事タイトル 2</h3>
-                <p>記事の概要や内容をここに書きます。</p>
-            </article>
-        </section>
+        <!-- コンタクトセクション -->
+<section id="contact" class="content">
+    <h2>コンタクト</h2>
+    <p>何かあれば気軽に連絡してください！Twitterの方が繋がる確率が高いと思います。<p>
+    <div class="contact-info">
+        <div class="contact-item">
+            <h3><i class="fas fa-envelope"></i> Mail Address：</h3>
+            <p><a href="mailto:koakijr@gmail.com">koakijr@gmail.com</a></p>
+        </div>
+        
+        <div class="contact-item">
+            <h3><i class="fab fa-twitter"></i> Twitter：</h3>
+            <p><a href="https://twitter.com/hotty_m57" target="_blank">@hotty_m57</a></p>
+        </div>
+
+        <div class="contact-item">
+            <h3><i class="fab fa-instagram"></i> Instagram：</h3>
+            <p><a href="https://www.instagram.com/hotty_____y/" target="_blank">@hotty_____y</a></p>
+        </div>
+    </div>
+</section>
+
+
+
     </main>
 
     <footer>
-        <p>&copy; 2024 私のブログ. All Rights Reserved.</p>
+        <p>&copy; 2024 ほってぃのブログ. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
